@@ -1,9 +1,6 @@
 package com.playdata.dblock.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -22,8 +19,8 @@ public class Inventory { // 재고관리용 테이블
     private Long count; // 재고량
 
 
-    
-
+    @Version
+    private Long version; // 버전.  낙관적에서 정합성을 맞추기 위해 선언.
 
 
 

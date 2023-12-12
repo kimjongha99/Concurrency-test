@@ -26,7 +26,7 @@ public class PessimisticInventoryServiceTest {
 
     @BeforeEach // 실제 테스트 돌리기 전 아이템 1개, 1번Id 부여, 100개 재고로 집어넣기
     public void insert() {
-        Inventory inventory = new Inventory(1L, "산타복", 100L);
+        Inventory inventory = new Inventory(1L, "산타복", 100L, 100L);
         inventoryRepository.saveAndFlush(inventory);
     }
 
